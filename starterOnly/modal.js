@@ -1,7 +1,8 @@
 function editNav() {
-  var x = document.getElementById("myTopnav");
+  var x = document.getElementById("myTopnav"); // récupère un élément HTML avec l'identifiant "myTopnav" et le stocke dans une variable appelée x.
   if (x.className === "topnav") {
-    x.className += " responsive";
+    //vérifie si la classe actuelle de l'élément est "topnav".
+    x.className += " responsive"; //ajoute " responsive" à la classe existante
   } else {
     x.className = "topnav";
   }
@@ -217,8 +218,8 @@ function validateConditions(form) {
 const reserveForm = document.getElementById("reserve-form");
 
 //declanche la validation de formulaire
-reserveForm.addEventListener("submit", function (e) {
-  e.preventDefault;
+reserveForm.addEventListener("submit", function (event) {
+  event.preventDefault;
   validate();
 });
 /////////////// Form validation
@@ -283,4 +284,3 @@ function close_modal2() {
 }
 ////ecoute  le click de closeModal
 document.getElementById("closeModal").addEventListener("click", close_modal);
-console.log("closeModal", closeModal);
