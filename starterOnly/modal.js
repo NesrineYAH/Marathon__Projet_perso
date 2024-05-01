@@ -283,3 +283,4 @@ function close_modal2() {
 }
 ////ecoute  le click de closeModal
 document.getElementById("closeModal").addEventListener("click", close_modal);
+console.log("closeModal", closeModal);
