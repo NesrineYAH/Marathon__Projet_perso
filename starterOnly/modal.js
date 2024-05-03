@@ -9,7 +9,7 @@ function editNav() {
 }
 
 // DOM Elements
-const modalbg = document.querySelector(".bground");
+const modalbg = document.querySelector(".bground"); //responsable d'affichage du form
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const form = document.forms["reserve"]; //  une référence au formulaire HTML nommé "reserve"
@@ -24,6 +24,9 @@ function launchModal() {
 
 /////////////validation pour le prenom
 function validateFirst(form) {
+  const regexFirstName = new RegExp(
+    /^[a-zA-ZÀ-ÿ]{2,35}([-' ,][a-zA-ZÀ-ÿ]+)*$/i
+  );
   const validateFirst = document.querySelector(".first");
   const first = form["first"].value.trim();
   //Si le prénom est vide ou contient moins de 2 lettres
@@ -44,6 +47,16 @@ function validateFirst(form) {
     );
     return true;
   }
+  /*  if (regexFirstName.test(firstName)) {
+    firstNameError.innerHTML = "";
+    inputFirstName.style.border = "2px solid green";
+    return true;
+  } else {
+    firstNameError.innerHTML =
+      "Erreur de votre prenon, 2 lettres minimum, aucun chiffre";
+    inputFirstName.style.border = "2px solid red";
+    return false;
+  }*/
 }
 
 ///////////////validation pour le nom
@@ -242,7 +255,7 @@ function validate() {
     isConditionsValid
   );
 }
-////////  modal
+////////  modal FOUR FERMER LE bground (form)
 function modal() {
   const modal = `
   <div class="modal-body">
