@@ -181,7 +181,7 @@ main {
 .content {
   margin: 5% auto;
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
   animation-name: modalopen;
   animation-duration: var(--modal-duration);
   background: #232323;
@@ -232,4 +232,59 @@ main {
 }
 .close:after {
   transform: rotate(-45deg);
+}
+.formData {
+  margin-bottom: 10px;
+}
+
+label {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+input {
+  width: 100%;
+  padding: 8px;
+  border: 0.8px solid #ccc;
+  outline: none;
+}
+.text-cpntrol {
+  margin: 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 20px;
+  height: 48px;
+}
+.text-label {
+  font-size: 12px;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+}
+.checkbox-label,
+.checkbox2-label {
+  position: relative;
+  margin-left: 36px;
+  font-size: 12px;
+  font-weight: normal;
+}
+.checkbox-label .checkbox-icon,
+.checkbox2-label .checkbox-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #279e7a;
+  border-radius: 50%;
+  text-indent: 29px;
+  white-space: nowrap;
+  position: absolute;
+  left: -30px;
+  top: -1px;
+  transition: 0.3s;
+}
+.checkbox-input {
+  display: none;
 }
