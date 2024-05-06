@@ -24,21 +24,25 @@ function launchModal() {
 
 /////////////validation pour le prenom
 function validateFirst(form) {
-  const regexFirstName = new RegExp(
-    /^[a-zA-ZÀ-ÿ]{2,35}([-' ,][a-zA-ZÀ-ÿ]+)*$/i
-  );
+  const regexFirstName = /^[a-zA-ZÀ-ÿ]{2,35}([-' ,][a-zA-ZÀ-ÿ]+)*$/i;
+
   const validateFirst = document.querySelector(".first");
   const first = form["first"].value.trim();
+
   //Si le prénom est vide ou contient moins de 2 lettres
   if (first === "" || first.length < 2) {
     validateFirst.setAttribute("data-error-visible", "true");
+    validateFirst.setAttribute("data-error", "Veuillez entrer votre Prénom");
+
+    return false;
+  } else if (!regexFirstName.test(first)) {
+    validateFirst.setAttribute("data-error-visible", "true");
     validateFirst.setAttribute(
       "data-error",
-      "Veuillez entrer 2 caractères ou plus pour le champ du Prénom"
+      "Erreur de votre prenon, veuillez le corriger "
     );
 
     return false;
-    //Si le prénom est correctement rempli
   } else {
     validateFirst.setAttribute("data-error-visible", "false");
     validateFirst.removeAttribute(
@@ -47,16 +51,6 @@ function validateFirst(form) {
     );
     return true;
   }
-  /*  if (regexFirstName.test(firstName)) {
-    firstNameError.innerHTML = "";
-    inputFirstName.style.border = "2px solid green";
-    return true;
-  } else {
-    firstNameError.innerHTML =
-      "Erreur de votre prenon, 2 lettres minimum, aucun chiffre";
-    inputFirstName.style.border = "2px solid red";
-    return false;
-  }*/
 }
 
 ///////////////validation pour le nom
@@ -166,6 +160,7 @@ function validateQuantity(form) {
       "la valeur ne peut pas etre négative"
     );
     return false;
+    //si la quantity est plus de 99
   } else if (quantity > 99) {
     validateQuantity.setAttribute("data-error-visible", "true");
     validateQuantity.setAttribute("data-error", "le maximum est 99");

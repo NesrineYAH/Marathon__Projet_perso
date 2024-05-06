@@ -214,7 +214,7 @@ main {
 }
 
 .modal-body {
-  padding: 2% 12%;
+  padding: 2% 10%;
   margin: 15px auto;
 }
 
@@ -282,7 +282,7 @@ input {
 }
 .formData[data-error]::after {
   content: attr(data-error);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #e54858;
   display: block;
   margin-top: 7px;
@@ -291,12 +291,16 @@ input {
   line-height: 0.3;
   opacity: 0;
   transition: 0.3s;
+  line-height: 128%;
 }
 .formData[data-error-visible="true"]::after {
   opacity: 1;
 }
 .formData[data-error-visible="true"] .text-control {
-  border: 2px solid #e54858;
+  border: 3px solid #e54858;
+}
+.formData[data-error-visible="false"] .text-control {
+  border: 3px solid #279e7a;
 }
 
 .checkbox-label,
