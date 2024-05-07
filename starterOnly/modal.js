@@ -25,7 +25,6 @@ function launchModal() {
 /////////////validation pour le prenom
 function validateFirst(form) {
   const regexFirstName = /^[a-zA-ZÀ-ÿ]{2,35}([-' ,][a-zA-ZÀ-ÿ]+)*$/i;
-
   const validateFirst = document.querySelector(".first");
   const first = form["first"].value.trim();
 
@@ -39,7 +38,7 @@ function validateFirst(form) {
     validateFirst.setAttribute("data-error-visible", "true");
     validateFirst.setAttribute(
       "data-error",
-      "Erreur de votre prenon, veuillez le corriger "
+      "Erreur de votre prénom, veuillez le corriger "
     );
 
     return false;
@@ -52,21 +51,26 @@ function validateFirst(form) {
     return true;
   }
 }
-
 ///////////////validation pour le nom
 function validateLast(form) {
+  const regexLastName = /^[a-zA-ZÀ-ÿ]{2,35}([-' ,][a-zA-ZÀ-ÿ]+)*$/i;
   const validateLast = document.querySelector(".last");
   const last = form["last"].value.trim();
   //Si le nom est vide ou contient moins de 2 lettres
   if (last === "" || last.length < 2) {
     validateLast.setAttribute("data-error-visible", "true");
-    validateLast.setAttribute(
-      "data-error",
-      "Veuillez entrer 2 caractères ou plus pour le champ du nom"
-    );
+    validateLast.setAttribute("data-error", "Veuillez entrer votre nom");
 
     return false;
     //Si le prénom est correctement rempli
+  } else if (!regexLastName.test(last)) {
+    validateLast.setAttribute("data-error-visible", "true");
+    validateLast.setAttribute(
+      "data-error",
+      "Erreur de votre nom, veuillez le corriger "
+    );
+
+    return false;
   } else {
     validateLast.setAttribute("data-error-visible", "false");
     validateLast.removeAttribute(
@@ -76,7 +80,6 @@ function validateLast(form) {
     return true;
   }
 }
-
 ///////////////validation pour l'email
 function validateEmail(form) {
   const validateEmailField = document.querySelector(".email");
@@ -107,6 +110,8 @@ function validateEmail(form) {
 }
 ///////////////validation pour la date de naissance
 function validateBirthdate(form) {
+  const regexBirthdateISO =
+    /^(19|20)\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/;
   const validateBirthdate = document.querySelector(".birthdate");
   const birthdate = form["birthdate"].value;
   const birthdateForAge = new Date(birthdate);
@@ -131,13 +136,21 @@ function validateBirthdate(form) {
     );
 
     return false;
+  } else if (!regexBirthdateISO.test(birthdate)) {
+    validateBirthdate.setAttribute("data-error-visible", "true");
+    validateBirthdate.setAttribute(
+      "data-error",
+      "Veuillez corriger votre date de naissance"
+    );
+
+    return false;
   } else {
     validateBirthdate.setAttribute("data-error-visible", "false");
     validateBirthdate.removeAttribute(
       "data-error",
       "vous devez entrer votre date de naissance"
     );
-    return false;
+    return true;
   }
 }
 /////////////validate la quantité
@@ -227,18 +240,22 @@ const reserveForm = document.getElementById("reserve-form");
 
 //declanche la validation de formulaire
 reserveForm.addEventListener("submit", function (event) {
-  event.preventDefault;
+  event.preventDefault();
   validate();
+  //alert("formulaire envoyé avec succes");
 });
+
 /////////////// Form validation
 function validate() {
   const isFirstNameValid = validateFirst(form);
   const isLastNameValid = validateLast(form);
   const isEmailValid = validateEmail(form);
   const isBirthdateValid = validateBirthdate(form);
-  const isQuantityValid = validateRadioButtons(form);
+  const isQuantityValid = validateQuantity(form);
   const isRadioButtonsValid = validateRadioButtons(form);
   const isConditionsValid = validateConditions(form);
+
+  //alert("formulaire ok");
 
   return (
     isFirstNameValid &&
@@ -252,14 +269,16 @@ function validate() {
 }
 ////////  modal FOUR FERMER LE bground (form)
 function modal() {
+  //cree le 2 modal
+
   const modal = `
-  <div class="modal-body">
-  <div class="modal_text">
-  <p> Merci pour </p>
-  <p> votre inscription </p>
-  </div>
-  <input id="closeModal2" class="btn-submit" type="submit" value="Fermer" />
-  </div>`;
+    <div class="modal-body">
+    <div class="modal_text">
+      <p>Merci pour </p>
+      <p>votre inscription</p>
+      </div>
+      <input id="closeModal2" class="btn-submit" type="submit"   value="Fermer" />
+    </div>`;
   document.querySelector(".modal-body").innerHTML = modal;
   document
     .getElementById("closeModal2")
@@ -267,14 +286,12 @@ function modal() {
 }
 ////////// Fonction pour gérer  le bouton de soumission "cest parti"
 function handleFormSubmit(e) {
-  e.preventDefault(); //// Empêche la soumission du formulaire
-  ////////// Appeler la fonction validate() si elle retourne true
+  e.preventDefault(); // Empêche la soumission du formulaire
+
   if (validate()) {
-    // Si elle est true c'est à dire le formulaire n'a pas d'erreur, appeler la fonction modal()
     modal();
   }
 }
-
 //ecoute  le click de submit
 document
   .getElementById("btn-submit")
@@ -283,12 +300,13 @@ document
 //ferme le modal
 function close_modal(e) {
   e.preventDefault();
-  modalbg.style.display = "none"; //????????????????
+  modalbg.style.display = "none";
 }
 //close modal 2 avec le rafraîchissement de la page
 function close_modal2() {
   modalbg.style.display = "none";
-  location.reload(false); //????????????????
+  location.reload(false);
+  alert("c'est bon l'inscription est passée");
 }
 ////ecoute  le click de closeModal
 document.getElementById("closeModal").addEventListener("click", close_modal);
