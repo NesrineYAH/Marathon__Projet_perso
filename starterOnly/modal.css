@@ -20,6 +20,7 @@ body {
   font-size: 18px;
   max-width: 1400px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 p {

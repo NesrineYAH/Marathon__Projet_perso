@@ -199,7 +199,7 @@ function validateRadioButtons(form) {
     }
   }
   if (!isChecked) {
-    validateRadioButtons.setAttribute("data-error-visible", "false");
+    validateRadioButtons.setAttribute("data-error-visible", "true");
     validateRadioButtons.setAttribute(
       "data-error",
       "Vous devez choisir une option."
