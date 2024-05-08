@@ -297,8 +297,8 @@ document
   .addEventListener("click", handleFormSubmit);
 
 //ferme le modal
-e.preventDefault;
 function close_modal(e) {
+  e.preventDefault;
   modalbg.style.display = "none";
 }
 //close modal 2 avec le rafraîchissement de la page

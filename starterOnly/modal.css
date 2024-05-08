@@ -190,7 +190,7 @@ main {
 .content {
   margin: 5% auto;
   width: 100%;
-  max-width: 480px;
+  max-width: 450px;
   animation-name: modalopen;
   animation-duration: var(--modal-duration);
   background: #232323;
@@ -218,7 +218,9 @@ main {
   padding: 2% 10%;
   margin: 15px auto;
 }
-
+.pp {
+  font-size: 12px;
+}
 .close {
   position: absolute;
   right: 15px;
@@ -256,7 +258,7 @@ label {
   font-family: var(--font-default);
   font-size: 17px;
   font-weight: normal;
-  margin-bottom: 11px;
+  margin-bottom: 8px;
 }
 
 input {
@@ -279,7 +281,7 @@ input {
   font-size: 12px;
 }
 .formData {
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
 .formData[data-error]::after {
   content: attr(data-error);

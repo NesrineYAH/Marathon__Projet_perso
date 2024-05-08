@@ -25,7 +25,7 @@
             min-height: 400px;
             margin: auto;
             padding: 4em 3em 4em 2em;
-            background: #f9f9f9;
+            background: #e7e1e1;
             border: 1px solid #ccc;
             border-radius: 10px;
         }
@@ -37,7 +37,7 @@
 
         .contact-form label {
             display: block;
-            margin-bottom: 0.8em;
+            margin-bottom: 0.6em;
         }
 
         .contact-form input,
@@ -64,18 +64,17 @@
             background: #218838;
         }
 
-        .formData::after {
+        .formData[data-error]::after {
             content: attr(data-error);
             font-size: 0.8rem;
             color: #e54858;
             display: block;
-            margin-top: 7px;
+            margin-top: -7px;
             margin-bottom: 7px;
             text-align: left;
             line-height: 0.3;
             opacity: 0;
             transition: 0.3s;
-            line-height: 128%;
         }
 
         .formData[data-error-visible="true"]::after {
@@ -101,10 +100,10 @@
     </p>
 
     <div class="contact-form">
-        <form name="contactForm" id="contactForm" class="form">
+        <form name="contactForm" action="index.html" method="get" id="contactForm" class="form">
             <div class='formData last'>
                 <label for="last">Nom :</label>
-                <input type="text" id="last" name="last" placeholder="Votre nom" required>
+                <input class="text-control" type="text" id="last" name="last" placeholder="Votre nom" required>
             </div>
 
             <div class='formData firstName'>
@@ -122,13 +121,13 @@
                 <textarea class="text-control" id="message" name="message" rows="4" placeholder="Votre message"
                     required></textarea>
             </div>
-            <button class="btn-submit button" type="submit" id="btn-submit">Envoyer</button>
+            <button type="submit">Envoyer</button>
         </form>
 
     </div>
     <p>
         Pour toute question complémentaire, vous pouvez nous contacter :<br />
-        Mmme la madame<br />
+        Mme la madame<br />
         nesrine@gmail.com <br />
         Tel : 01 41 85 15 18</p>
 
