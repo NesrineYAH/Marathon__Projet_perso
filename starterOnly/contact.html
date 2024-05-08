@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Contactez-nous</title>
-
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -64,6 +63,32 @@
         .contact-form button:hover {
             background: #218838;
         }
+
+        .formData::after {
+            content: attr(data-error);
+            font-size: 0.8rem;
+            color: #e54858;
+            display: block;
+            margin-top: 7px;
+            margin-bottom: 7px;
+            text-align: left;
+            line-height: 0.3;
+            opacity: 0;
+            transition: 0.3s;
+            line-height: 128%;
+        }
+
+        .formData[data-error-visible="true"]::after {
+            opacity: 1;
+        }
+
+        .formData[data-error-visible="true"] .text-control {
+            border: 3px solid #e54858;
+        }
+
+        .formData[data-error-visible="false"] .text-control {
+            border: 3px solid #279e7a;
+        }
     </style>
 </head>
 
@@ -76,20 +101,28 @@
     </p>
 
     <div class="contact-form">
-        <form id="contactForm">
-            <label for="name">Nom :</label>
-            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+        <form name="contactForm" id="contactForm" class="form">
+            <div class='formData last'>
+                <label for="last">Nom :</label>
+                <input type="text" id="last" name="last" placeholder="Votre nom" required>
+            </div>
 
-            <label for="firstName">Prénom :</label>
-            <input type="text" id="firstName" name="firstName" placeholder="Votre prénom" required>
+            <div class='formData firstName'>
+                <label for="firstName">Prénom :</label>
+                <input class="text-control" type="text" id="firstName" name="firstName" placeholder="Votre prénom"
+                    required>
+            </div>
 
-            <label for="email">E-mail :</label>
-            <input type="email" id="email" name="email" placeholder="Votre e-mail" required>
-
-            <label for="message">Message :</label>
-            <textarea id="message" name="message" rows="4" placeholder="Votre message" required></textarea>
-
-            <button type="submit">Envoyer</button>
+            <div class='formData email'>
+                <label for="email">E-mail :</label>
+                <input class="text-control" type="email" id="email" name="email" placeholder="Votre e-mail" required>
+            </div>
+            <div class='formData Message'>
+                <label for="message">Message :</label>
+                <textarea class="text-control" id="message" name="message" rows="4" placeholder="Votre message"
+                    required></textarea>
+            </div>
+            <button class="btn-submit button" type="submit" id="btn-submit">Envoyer</button>
         </form>
 
     </div>
@@ -99,29 +132,7 @@
         nesrine@gmail.com <br />
         Tel : 01 41 85 15 18</p>
 
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Empêcher l'envoi par défaut du formulaire
-
-            // Valider le formulaire
-            var name = document.getElementById('name').value;
-            var email = document.getElementById('email').value;
-            var message = document.getElementById('message').value;
-
-            if (!name || !email || !message) {
-                alert("Veuillez remplir tous les champs.");
-                return;
-            }
-
-            // Simuler l'envoi des données à un serveur
-            console.log("Nom :", name);
-            console.log("E-mail :", email);
-            console.log("Message :", message);
-
-            alert("Votre message a été envoyé avec succès !");
-            document.getElementById('contactForm').reset(); // Réinitialiser le formulaire après l'envoi
-        });
-    </script>
+    <script src="contact.js"></script>
 
 </body>
 
