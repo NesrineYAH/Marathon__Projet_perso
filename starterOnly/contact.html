@@ -69,8 +69,8 @@
             font-size: 0.8rem;
             color: #e54858;
             display: block;
-            margin-top: -7px;
-            margin-bottom: 7px;
+            margin-top: -15px;
+            margin-bottom: 20px;
             text-align: left;
             line-height: 0.3;
             opacity: 0;
@@ -83,10 +83,6 @@
 
         .formData[data-error-visible="true"] .text-control {
             border: 3px solid #e54858;
-        }
-
-        .formData[data-error-visible="false"] .text-control {
-            border: 3px solid #279e7a;
         }
     </style>
 </head>
@@ -119,9 +115,9 @@
             <div class='formData Message'>
                 <label for="message">Message :</label>
                 <textarea class="text-control" id="message" name="message" rows="4" placeholder="Votre message"
-                    required></textarea>
+                    require></textarea>
             </div>
-            <button type="submit">Envoyer</button>
+            <button id="btn-submit" type="submit">Envoyer</button>
         </form>
 
     </div>

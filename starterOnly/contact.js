@@ -23,7 +23,6 @@ form.addEventListener("submit", function (event) {
     );
   }
 });
-
 // Fonction de validation du prénom
 function validateFirst(form) {
   const firstName = form["firstName"].value.trim();
@@ -87,7 +86,8 @@ function validateEmail(form) {
 // Fonction de validation du message
 function validateMessage(form) {
   const message = form["message"].value.trim();
-  const regexMessage = /^[a-zA-Z\s]+$/;
+  //const regexMessage = /^[a-zA-Z\s]+$/;
+  const regexMessage = /^[a-zA-ZÀ-ÿ]{2,35}([-' ,][a-zA-ZÀ-ÿ]+)*$/i;
 
   if (message === "" || !regexMessage.test(message)) {
     const errorField = form.querySelector(".message");
@@ -111,3 +111,32 @@ function validate(form) {
 
   return isFirstNameValid && isLastNameValid && isEmailValid && isMessageValid;
 }
+function modalContent() {
+  //cree le 2 modal
+
+  const modalContent = `
+    <div class="modal-bodyII">
+    <div class="modal_textII">
+      <p>Merci pour votre contact</p>
+      <p>Nous reviendrons vers vous dès que possible.</p>
+      <input id="closeModal2" type="button" value="Fermer" />
+    </div>`;
+
+  const modalBodyII = document.querySelector(".modal-bodyII");
+  modalBodyII.innerHTML = modalContent;
+
+  document
+    .getElementById("closeModal2")
+    .addEventListener("click", close_modal2);
+}
+// Vérification si le formulaire et les éléments ont les bons identifiants
+document
+  .getElementById("btn-submit")
+  .addEventListener("click", function (event) {
+    event.preventDefault(); // Empêche la soumission du formulaire par défaut
+    if (validate(form)) {
+      modalContent(); // Afficher la modal si tout est valide
+    } else {
+      alert("Les informations sont incorrectes. Veuillez les corriger.");
+    }
+  });
