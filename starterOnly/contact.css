@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  min-width: 70%;
+  overflow: hidden;
+  font-size: 1.5rem;
+  padding: 3rem 8rem 3rem 5rem;
+}
+
+.contact-form {
+  max-width: 500px;
+  height: auto;
+  margin: auto;
+  padding: 2em 3em 2em 2em;
+  background: #363232;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.6em;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 96%;
+  padding: 0.8em;
+  margin-bottom: 2em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 1.2em;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 2.5rem;
+}
+
+.contact-form button:hover {
+  background: #218838;
+}
+
+.formData[data-error]::after {
+  content: attr(data-error);
+  font-size: 0.8rem;
+  color: #e54858;
+  display: block;
+  margin-top: -15px;
+  margin-bottom: 20px;
+  text-align: left;
+  line-height: 0.3;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.formData[data-error-visible="true"]::after {
+  opacity: 1;
+}
+
+.formData[data-error-visible="true"] .text-control {
+  border: 3px solid #e54858;
+}
+.modal_Carre {
+  width: inherit;
+  height: auto;
+  opacity: 1;
+}
+
+.Cclose {
+  display: block;
+  position: absolute;
+  left: 66%;
+  top: 294px;
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(0.8);
+}
+
+.Cclose:before,
+.Cclose:after {
+  /* color: black;*/
+  position: absolute;
+  left: 15px;
+
+  content: " ";
+  height: 33px;
+  width: 3px;
+  background-color: #fff;
+}
+
+.Cclose:before {
+  transform: rotate(45deg);
+}
+
+.Cclose:after {
+  transform: rotate(-45deg);
+}

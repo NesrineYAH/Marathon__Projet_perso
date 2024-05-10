@@ -4,87 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Contactez-nous</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        p {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            align-self: center;
-            min-width: 70%;
-            overflow: hidden;
-            font-size: 1.5rem;
-            padding: 3rem 8rem 3rem 5rem;
-        }
-
-        .contact-form {
-            max-width: 500px;
-            min-height: 400px;
-            margin: auto;
-            padding: 4em 3em 4em 2em;
-            background: #e7e1e1;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 30px;
-        }
-
-        .contact-form label {
-            display: block;
-            margin-bottom: 0.6em;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 96%;
-            padding: .8em;
-            margin-bottom: 2em;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .contact-form button {
-            width: 100%;
-            padding: 1.2em;
-            background: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 2.5rem;
-        }
-
-        .contact-form button:hover {
-            background: #218838;
-        }
-
-        .formData[data-error]::after {
-            content: attr(data-error);
-            font-size: 0.8rem;
-            color: #e54858;
-            display: block;
-            margin-top: -15px;
-            margin-bottom: 20px;
-            text-align: left;
-            line-height: 0.3;
-            opacity: 0;
-            transition: 0.3s;
-        }
-
-        .formData[data-error-visible="true"]::after {
-            opacity: 1;
-        }
-
-        .formData[data-error-visible="true"] .text-control {
-            border: 3px solid #e54858;
-        }
-    </style>
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet" />
 </head>
 
 <body>
@@ -94,31 +16,36 @@
         tu ne trouves pas le renseignement désiré sur notre Foire aux Questions,
         contacte-nous via l'adresse suivante : nesrineyahoum@gmail.com
     </p>
+    <div class="Nodelt">
+        <div class="contact-form">
+            <span id="closeModal" class="Cclose"></span>
+            <form name="contactForm" action="contatc.html" method="get" id="contactForm" class="form">
+                <div class='formData last'>
+                    <label for="last">Nom :</label>
+                    <input class="text-control" type="text" id="last" name="last" placeholder="Votre nom" required>
+                </div>
 
-    <div class="contact-form">
-        <form name="contactForm" action="index.html" method="get" id="contactForm" class="form">
-            <div class='formData last'>
-                <label for="last">Nom :</label>
-                <input class="text-control" type="text" id="last" name="last" placeholder="Votre nom" required>
-            </div>
+                <div class='formData firstName'>
+                    <label for="firstName">Prénom :</label>
+                    <input class="text-control" type="text" id="firstName" name="firstName" placeholder="Votre prénom"
+                        required>
+                </div>
 
-            <div class='formData firstName'>
-                <label for="firstName">Prénom :</label>
-                <input class="text-control" type="text" id="firstName" name="firstName" placeholder="Votre prénom"
-                    required>
-            </div>
+                <div class='formData email'>
+                    <label for="email">E-mail :</label>
+                    <input class="text-control" type="email" id="email" name="email" placeholder="Votre e-mail"
+                        required>
+                </div>
+                <div class='formData message'>
+                    <label for="message">Message :</label>
+                    <textarea class="text-control" id="message" name="message" rows="4" placeholder="Votre message"
+                        require></textarea>
+                </div>
+                <button id="btn-submit" type="submit">Envoyer</button>
+            </form>
 
-            <div class='formData email'>
-                <label for="email">E-mail :</label>
-                <input class="text-control" type="email" id="email" name="email" placeholder="Votre e-mail" required>
-            </div>
-            <div class='formData Message'>
-                <label for="message">Message :</label>
-                <textarea class="text-control" id="message" name="message" rows="4" placeholder="Votre message"
-                    require></textarea>
-            </div>
-            <button id="btn-submit" type="submit">Envoyer</button>
-        </form>
+        </div>
+    </div>
 
     </div>
     <p>
