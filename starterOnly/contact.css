@@ -80,7 +80,7 @@ h1 {
 .modal_Carre {
   width: inherit;
   height: auto;
-  opacity: 1;
+  opacity: 0;
 }
 
 .Cclose {

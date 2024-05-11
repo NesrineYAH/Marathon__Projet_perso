@@ -1,5 +1,4 @@
 const formData = document.querySelectorAll(".formData");
-const ContNodelt = document.querySelector(".Nodelt");
 
 // Fonction de validation du prénom
 function validateFirst(form) {
@@ -117,47 +116,34 @@ function Validation() {
 }
 
 function Modal() {
-  //cree le 2 modal
-
   const modalContent = `
     <div class="modal_Carre">
     <div class="modal_textII">
       <p>Merci pour votre contact</p>
       <p>Nous reviendrons vers vous dès que possible.</p>
       </div>
-      <input id="closeModal2" type="button" value="Fermer" />
+      <input id="closeButton" type="button" value="Fermer" />
     </div>`;
 
-  const modalCarre = document.querySelector(".modal_Carre");
-  modalCarre.innerHTML = modalContent;
-
-  /* document
-    .getElementById("closeModal2")
-    .addEventListener("click", close_modal2);*/
+  modalCarre = document.querySelector(".modal_Carre");
+  //document.querySelector(".modal_Carre").innerHTML = modalContent;
+  modalCarre.innerHTML = Modal();
 }
-// Vérification si le formulaire et les éléments ont les bons identifiants
+
 document
   .getElementById("btn-submit")
   .addEventListener("submit", function (event) {
-    event.preventDefault(); // Empêche la soumission du formulaire par défaut
-    if (!Validation()) {
-      modalCarre.style.display = "none";
-    } else {
+    event.preventDefault();
+    if (Validation()) {
       Modal();
-      modalCarre.style.display = "block";
-      //location.reload(false);
-      alert("Nous avons reçu votre message");
+      modalCarre.style.opacity = 1;
     }
   });
+document.getElementById("closeButton").addEventListener("Fermer", fermeModal);
 
-function close_modal(e) {
-  modal_Carre.style.display = "none";
-}
-//close modal 2 avec le rafraîchissement de la page
-function close_modal2() {
-  modal_Carre.style.display = "block";
+function fermeModal() {
   location.reload(false);
-  alert("Nous avons reçu votre message");
+  alert("c'est bon l'inscription est passée");
 }
-////ecoute  le click de closeModal
-document.getElementById("closeModal").addEventListener("click", close_modal);
+
+document.getElementById("closeButton").addEventListener("click", fermeModal);
