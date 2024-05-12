@@ -18,41 +18,35 @@
     </p>
 
     <div class="contact-form">
-        <span id="closeModal" class="Cclose"></span>
-        <form name="contactForm" id="contactForm" class="form" action="" method="post">
-            <div class='formData last'>
-                <label for="last">Nom :</label>
-                <input class="text-control" type="text" id="last" name="last" placeholder="Votre nom" required>
-            </div>
 
-            <div class='formData firstName'>
-                <label for="firstName">Prénom :</label>
-                <input class="text-control" type="text" id="firstName" name="firstName" placeholder="Votre prénom"
-                    required>
-            </div>
+        <div id="modalBody">
+            <form name="contactForm" id="contactForm" class="form" action="contact.html" method="post">
+                <div class='formData last'>
+                    <label for="last">Nom :</label>
+                    <input class="text-control" type="text" id="last" name="last" placeholder="Votre nom" required>
+                </div>
 
-            <div class='formData email'>
-                <label for="email">E-mail :</label>
-                <input class="text-control" type="email" id="email" name="email" placeholder="Votre e-mail" required>
-            </div>
-            <div class='formData message'>
-                <label for="message">Message :</label>
-                <textarea class="text-control" id="message" name="message" rows="4" placeholder="Votre message"
-                    require></textarea>
-            </div>
-            <button id="btn-submit" type="submit">Envoyer</button>
-        </form>
-    </div>
-    <div id="modalBody">
-        <div class="modal_textI">
-            <p>Merci pour votre contact </br>
-                Nous reviendrons vers vous dès que possible</p>
+                <div class='formData firstName'>
+                    <label for="firstName">Prénom :</label>
+                    <input class="text-control" type="text" id="firstName" name="firstName" placeholder="Votre prénom"
+                        required>
+                </div>
+
+                <div class='formData email'>
+                    <label for="email">E-mail :</label>
+                    <input class="text-control" type="email" id="email" name="email" placeholder="Votre e-mail"
+                        required>
+                </div>
+                <div class='formData message'>
+                    <label for="message">Message :</label>
+                    <textarea class="text-control" id="message" name="message" rows="4" placeholder="Votre message"
+                        require></textarea>
+                </div>
+                <button id="btn-submit" type="submit">Envoyer</button>
+            </form>
         </div>
-        <button class="btn-submit" type="submit" value="Fermer">
-            <input id="closeModal4" type="submit" value="Fermer" />
-        </button>
     </div>
-    </div>
+
     <p>Pour toute question complémentaire, vous pouvez nous contacter :<br />
         Mme la madame<br />
         nesrine@gmail.com <br />

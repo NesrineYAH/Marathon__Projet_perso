@@ -122,7 +122,21 @@ document
   .addEventListener("submit", handleFormSubmit);
 
 function modal() {
-  const modal = document.getElementById("modalBody").innerHTML;
+  const modalScript = `
+    <div id="modalBody">
+  <div class="modal_textI">
+      <p>Merci pour votre contact </br>
+          Nous reviendrons vers vous dès que possible</p>
+
+      <input id="closeModal4" class="btn-submit" type="submit" value="Fermer" />
+
+  </div>
+</div>`;
+
+  document.getElementById("modalBody").innerHTML = modalScript;
+  document
+    .getElementById("closeModal4")
+    .addEventListener("click", close_modal2);
 }
 function close_modal(e) {
   e.preventDefault;
@@ -130,8 +144,8 @@ function close_modal(e) {
 }
 //close modal 2 avec le rafraîchissement de la page
 function close_modal2() {
-  modalBody.style.display = "none";
+  modalBody.style.display = "block";
   location.reload(false);
 }
 ////ecoute  le click de closeModal
-document.getElementById("closeModal4").addEventListener("click", close_modal);
+document.getElementById("closeModal2").addEventListener("click", close_modal);
