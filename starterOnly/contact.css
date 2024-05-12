@@ -18,9 +18,10 @@ p {
   height: auto;
   margin: auto;
   padding: 2em 3em 2em 2em;
-  background: #363232;
+  background: #d7d2d2;
   border: 1px solid #ccc;
   border-radius: 10px;
+  z-index: 1;
 }
 
 h1 {
@@ -77,12 +78,48 @@ h1 {
 .formData[data-error-visible="true"] .text-control {
   border: 3px solid #e54858;
 }
-.modal_Carre {
-  width: inherit;
-  height: auto;
-  opacity: 0;
+
+#modalBody {
+  background: #d7d2d2;
+  z-index: -1;
+  max-width: 500px;
+  height: 100%;
+  margin: auto;
+  padding: 2em 3em 2em 2em;
+  background: #d7d2d2;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.modal_textI {
+  width: 100%;
+}
+.modal_textI p {
+  font-size: 20px;
+  font-weight: 600;
 }
 
+.btn-submit {
+  background: #fe142f;
+  display: block;
+  margin: 0 auto;
+  border-radius: 7px;
+  font-size: 1rem;
+  margin-top: -20px;
+  padding: 12px 12px;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+}
+#closeModal4 {
+  cursor: pointer;
+  width: 140px;
+  height: 30px;
+  background: #fe142f;
+  color: #fff;
+  border: 0;
+}
 .Cclose {
   display: block;
   position: absolute;

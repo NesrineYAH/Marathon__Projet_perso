@@ -276,7 +276,7 @@ function modal() {
       <p>Merci pour </p>
       <p>votre inscription</p>
       </div>
-      <input id="closeModal2" class="btn-submit" type="submit"   value="Fermer" />
+      <input id="closeModal2" class="btn-submit" type="submit" value="Fermer" />
     </div>`;
   document.querySelector(".modal-body").innerHTML = modal;
   document
@@ -305,7 +305,6 @@ function close_modal(e) {
 function close_modal2() {
   modalbg.style.display = "none";
   location.reload(false);
-  alert("c'est bon l'inscription est passée");
 }
 ////ecoute  le click de closeModal
 document.getElementById("closeModal").addEventListener("click", close_modal);

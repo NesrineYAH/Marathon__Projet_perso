@@ -84,9 +84,7 @@ const form = document.getElementById("contactForm");
 
 // Gestionnaire d'événement pour le formulaire
 form.addEventListener("submit", function (event) {
-  event.preventDefault(); // Empêcher l'envoi par défaut du formulaire
-
-  // Validation du formulaire
+  event.preventDefault();
   const isFormValid = Validation();
 
   if (isFormValid) {
@@ -98,14 +96,13 @@ form.addEventListener("submit", function (event) {
 
     // Réinitialiser le formulaire après l'envoi
     form.reset();
+    modal();
   } else {
     alert(
       "Certaines informations sont incorrectes. Veuillez les corriger et réessayer."
     );
   }
 });
-
-// Fonction de validation globale du formulaire
 function Validation() {
   const isFirstNameValid = validateFirst(form);
   const isLastNameValid = validateLast(form);
@@ -114,36 +111,27 @@ function Validation() {
 
   return isFirstNameValid && isLastNameValid && isEmailValid && isMessageValid;
 }
-
-function Modal() {
-  const modalContent = `
-    <div class="modal_Carre">
-    <div class="modal_textII">
-      <p>Merci pour votre contact</p>
-      <p>Nous reviendrons vers vous dès que possible.</p>
-      </div>
-      <input id="closeButton" type="button" value="Fermer" />
-    </div>`;
-
-  modalCarre = document.querySelector(".modal_Carre");
-  //document.querySelector(".modal_Carre").innerHTML = modalContent;
-  modalCarre.innerHTML = Modal();
+function handleFormSubmit(e) {
+  e.preventDefault();
+  if (Validation()) {
+    modal();
+  }
 }
-
 document
   .getElementById("btn-submit")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
-    if (Validation()) {
-      Modal();
-      modalCarre.style.opacity = 1;
-    }
-  });
-document.getElementById("closeButton").addEventListener("Fermer", fermeModal);
+  .addEventListener("submit", handleFormSubmit);
 
-function fermeModal() {
-  location.reload(false);
-  alert("c'est bon l'inscription est passée");
+function modal() {
+  const modal = document.getElementById("modalBody").innerHTML;
 }
-
-document.getElementById("closeButton").addEventListener("click", fermeModal);
+function close_modal(e) {
+  e.preventDefault;
+  modalBody.style.display = "none";
+}
+//close modal 2 avec le rafraîchissement de la page
+function close_modal2() {
+  modalBody.style.display = "none";
+  location.reload(false);
+}
+////ecoute  le click de closeModal
+document.getElementById("closeModal4").addEventListener("click", close_modal);
