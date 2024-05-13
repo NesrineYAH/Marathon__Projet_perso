@@ -55,6 +55,7 @@
 }
 body {
   max-width: 1600px;
+  height: 100%;
 }
 .marathonPage {
   display: flex;
@@ -70,11 +71,11 @@ body {
 }
 .sidebar {
   width: 25%;
-  height: auto;
+  min-height: 180vh;
   background-color: #218838;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  padding-top: 20px;
 }
 .imageSide {
   width: 100%;
@@ -82,14 +83,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 50px;
+  gap: 30px;
 }
-.IMG {
-  width: 250px;
-  height: 250px;
-  opacity: 1;
-  z-index: 1;
+.imageSide img {
   background-color: transparent;
+  height: 200px;
 }
 .sidebar-content {
   padding: 16px;
