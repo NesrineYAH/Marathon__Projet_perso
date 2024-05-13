@@ -21,9 +21,9 @@ function prevSlide() {
 showSlide(currentIndex);
 
 function openSidebar() {
-  document.querySelector(".sidebar").style.width = "45%";
+  document.querySelector(".imageSide").style.display = "block";
 }
 
 function closeSidebar() {
-  document.querySelector(".sidebar").style.width = "0";
+  document.querySelector(".imageSide").style.display = "none";
 }
