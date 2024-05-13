@@ -1,5 +1,8 @@
 .carousel {
   margin: auto;
+  width: 100%;
+  position: relative;
+  left: 2%;
 }
 
 .carousel-images {
@@ -9,8 +12,8 @@
 }
 
 .carousel-images img {
-  width: 800px;
-  height: 800px;
+  width: 1600px;
+  height: 1200px;
   transition: transform 0.5s ease;
   border: 2px solid #2a2727;
   border-radius: 10px 10px;
@@ -37,7 +40,6 @@
 }
 .loremH {
   padding: 3 rem;
-
   top: 2%;
   display: flex;
   justify-content: center;
@@ -46,7 +48,6 @@
   z-index: 1;
 }
 .lorem {
-  /*;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,13 +62,11 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  gap: 15%;
+
   width: 100%;
 }
 .section {
-  position: relative;
-  left: 6%;
-  max-width: 800px;
+  width: 90%;
 }
 .side {
   padding: 16px;
@@ -94,12 +93,14 @@ p {
   border: 1px solid #fff;
 }
 .sidebar {
+  margin-right: -32px;
   width: 26rem;
   height: auto;
   background-color: #218838;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 10px;
+  border-radius: 10px;
 }
 h2 {
   display: block;
@@ -112,4 +113,21 @@ h2 {
 
 #openBtn {
   z-index: 1;
+}
+.globle {
+  background-color: #ddd3d3;
+  width: inherit;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 50px;
+  gap: 50px;
+}
+.globleCard {
+  width: 320px;
+  height: 320px;
+  border: 2px solid #218838;
 }

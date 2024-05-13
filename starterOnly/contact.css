@@ -124,6 +124,11 @@ h1 {
   color: #fff;
   border: 0;
 }
+span {
+  color: #e90c22;
+  font-weight: 800;
+  font-size: 1rem;
+}
 /*
 .Cclose {
   display: block;
