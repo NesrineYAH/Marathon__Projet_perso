@@ -68,85 +68,54 @@
   top: 45%;
   cursor: pointer;
   width: 50px;
+  height: 2.5rem;
 }
-
-.share-item.hover-background-and-icon-scale::after,
-.share-item.hover-background-from-center::after,
-.share-item.hover-background-theme-from-center::after,
-.share-item.hover-background-theme::after {
-  content: "";
-  height: 0;
-  right: 0%;
-  position: fixed;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transform-origin: center center;
-
-  cursor: pointer;
-}
-/*.social-inner.background-social .share-item a[data-v-85211400], si j'enlève les svg color #fff*/
 .social-inner.background-social .share-item [data-v-85211400],
 .social-inner.background-social .share-item[data-v-85211400] {
   color: #fff;
   text-decoration: none;
 }
-
 .svg-inline--fa {
   display: flex;
   align-items: center;
-  height: 1.8em;
+  height: 1.2em;
   overflow: visible;
-  background-color: var(--theme-color);
-  width: 50px;
-  padding-top: 3px;
-  margin-bottom: 0.2px;
-  border-radius: 2px;
+  width: 45px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .share-item {
-  width: 50px;
-  height: 2.5em;
+  width: 45px;
+  height: 3em;
 }
-
+.share-item :hover {
+  background-color: var(--Theme-color);
+}
 .facebook {
-  color: var(#fff);
-  width: inherit;
   background: var(--facebook-color);
-  padding-top: 2px;
-}
-.fa-facebook {
-  background: var(--facebook-color);
-  color: var(#fff);
-  height: 2em;
 }
 .twitter {
   background-color: var(--twitter-color);
-  color: var(#fff);
 }
-.fa-x-twitter {
-  background-color: var(--twitter-color);
-  color: var(#fff);
-}
-.fa-instagram {
+.instagram {
   background: var(--instagram-gradient);
-  height: 2em;
-  /*;*/
 }
 .qrcode {
   background: var(--qrcode-color);
 }
-.fa-qrcode {
-  padding-top: 2px;
-  background: var(--qrcode-color);
-  height: 1.4em;
-}
 .email {
   background-color: var(--email-color);
-  height: 2em;
-  /* --linkedin-color: #0077af;*/
 }
-.fa-envelope {
-  background-color: var(--email-color);
+.linkedin {
+  background-color: var(--linkedin-color);
 }
+.widget {
+  background-color: var(--widget-color);
+}
+.subscribe {
+  background-color: var(--theme-color);
+}
+
 body {
   max-width: 1600px;
   height: 100%;
@@ -157,14 +126,46 @@ body {
 .header__navigation {
   display: flex;
   flex-direction: row;
-  color: #515151;
-  background-color: #0ed733;
+  color: #f6e9e9;
+  background-color: #00536a;
   height: 70px;
+  width: 100%;
 }
 .header__navigation__top {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.flag {
+  font-size: 24px;
+  color: #fff;
+}
+#nav-lang-fr {
+  font-size: 24px;
+  color: #fff;
+}
+.listHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.listLangue {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+.dropdownI {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+}
+.dropdownII {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 10%;
 }
 /*  Mise en page Milieu de page */
 .marathonPage {

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de QR Code</title>
+    <style>
+        #qrcode {
+            width: 160px;
+            height: 160px;
+            margin-top: 15px;
+            animation: flash 1.5s infinite;
+        }
+
+        @keyframes flash {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Générateur de QR Code</h1>
+        <input type="text" id="text" placeholder="Entrez le texte à encoder">
+        <button onclick="generateQRCode()">Générer</button>
+        <div id="qrcode"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script>
+        function generateQRCode() {
+            const text = document.getElementById('text').value;
+            if (text) {
+                const qrcodeContainer = document.getElementById('qrcode');
+                qrcodeContainer.innerHTML = ""; // Clear any existing QR code
+                new QRCode(qrcodeContainer, {
+                    text: text,
+                    width: 160,
+                    height: 160
+                });
+            } else {
+                alert("Veuillez entrer du texte à encoder.");
+            }
+        }
+    </script>
+</body>
+
+</html>

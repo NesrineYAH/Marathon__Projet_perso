@@ -4,7 +4,7 @@ const totalSlides = slides.length; //9
 
 function showSlide(index) {
   slides.forEach((slide, i) => {
-    slide.style.transform = `translateX(${1600 * (i - index)}%)`;
+    slide.style.transform = `translateX(${200 * (i - index)}%)`;
   });
 }
 

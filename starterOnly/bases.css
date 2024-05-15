@@ -3,7 +3,7 @@
   --twitter-color: #0f1419;
   --google-color: #d34836;
   --linkedin-color: #0077af;
-  /*  --email-color: #2cae99;*/
+  --develop-color: #e19cc4;
   --email-color: #055748;
   --whatsapp-color: #58ca3f;
   --youtube-color: #c12025;
@@ -38,7 +38,7 @@
 :root,
 ::after,
 ::before {
-  /* --theme-color: #00536a;*/
+  --Theme-color: #00536a;
   --theme-color: #bdc7ca;
   --fp-body-color: #ffffff;
   --fp-theme-color: #00536a;
