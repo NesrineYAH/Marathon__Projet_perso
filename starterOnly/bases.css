@@ -1,0 +1,58 @@
+:root {
+  --facebook-color: #1877f2;
+  --twitter-color: #0f1419;
+  --google-color: #d34836;
+  --linkedin-color: #0077af;
+  /*  --email-color: #2cae99;*/
+  --email-color: #055748;
+  --whatsapp-color: #58ca3f;
+  --youtube-color: #c12025;
+  --instagram-color: #125688;
+  --qrcode-color: #f03b2c;
+  --instagram-gradient: radial-gradient(
+      circle farthest-corner at 28% 100%,
+      #fcdf8f 0%,
+      #fbd377 10%,
+      #fa8e37 22%,
+      #f73344 35%,
+      transparent 65%
+    ),
+    linear-gradient(145deg, #3051f1 10%, #c92bb7 70%);
+  --pinterest-color: #d01d15;
+  --qrcode-color: #f03b2c;
+  --widget-color: #eb1786;
+  --text-color: var(--fp-text-color, #333);
+  --font-size: 16px;
+  --placeholder-color: #b0b0b0;
+  --placeholder-font-size: 0.925rem;
+  --bs-link-color: var(--fp-hyperlink-color, var(--fp-theme-color));
+}
+:root {
+  --bs-breakpoint-xs: 0;
+  --bs-breakpoint-sm: 576px;
+  --bs-breakpoint-md: 768px;
+  --bs-breakpoint-lg: 992px;
+  --bs-breakpoint-xl: 1200px;
+  --bs-breakpoint-xxl: 1400px;
+}
+:root,
+::after,
+::before {
+  /* --theme-color: #00536a;*/
+  --theme-color: #bdc7ca;
+  --fp-body-color: #ffffff;
+  --fp-theme-color: #00536a;
+  --fp-text-color: #000000;
+  --fp-title-color: #03546b;
+  --fp-theme-contrast-color: #ffffff;
+  --fp-title-font: Figtree;
+  --fp-text-font: Figtree;
+  --fp-button-font: Figtree;
+  --fp-hyperlink-color: #03545b;
+  --donation-button-background-color: var(--fp-theme-color);
+  --donation-button-text-color: var(--fp-body-color);
+  --start-action-button-background-color: var(--fp-theme-color);
+  --start-action-button-text-color: var(--fp-theme-contrast-color);
+  --start-project-button-background-color: var(--fp-theme-color);
+  --start-project-button-text-color: var(--fp-theme-contrast-color);
+}

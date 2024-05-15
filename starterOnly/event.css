@@ -2,9 +2,7 @@
 
 .carousel {
   margin: auto;
-  width: 100%;
-  position: relative;
-  left: 2%;
+  width: 94%;
 }
 
 .carousel-images {
@@ -14,7 +12,7 @@
 }
 
 .carousel-images img {
-  width: 1600px;
+  width: 1400px;
   height: 1200px;
   transition: transform 0.5s ease;
   border: 2px solid #2a2727;
@@ -49,10 +47,110 @@
   font-size: 4rem;
   z-index: 1;
 }
+/* bloc social media  */
 
+.fixed-share-buttons[data-v-3560e2f8] {
+  --share-border-radius: var(--28277ea2);
+  --share-box-shadow: var(--085318cc);
+  --bg-color: var(--58b352ad);
+  --text-color: var(--dfb0f9f6);
+  --offset: 0;
+}
+
+.social-inner {
+  height: var(--item-size);
+  justify-content: center;
+  width: var(--item-size);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 1%;
+  top: 45%;
+  cursor: pointer;
+  width: 50px;
+}
+
+.share-item.hover-background-and-icon-scale::after,
+.share-item.hover-background-from-center::after,
+.share-item.hover-background-theme-from-center::after,
+.share-item.hover-background-theme::after {
+  content: "";
+  height: 0;
+  right: 0%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+
+  cursor: pointer;
+}
+/*.social-inner.background-social .share-item a[data-v-85211400], si j'enlève les svg color #fff*/
+.social-inner.background-social .share-item [data-v-85211400],
+.social-inner.background-social .share-item[data-v-85211400] {
+  color: #fff;
+  text-decoration: none;
+}
+
+.svg-inline--fa {
+  display: flex;
+  align-items: center;
+  height: 1.8em;
+  overflow: visible;
+  background-color: var(--theme-color);
+  width: 50px;
+  padding-top: 3px;
+  margin-bottom: 0.2px;
+  border-radius: 2px;
+}
+.share-item {
+  width: 50px;
+  height: 2.5em;
+}
+
+.facebook {
+  color: var(#fff);
+  width: inherit;
+  background: var(--facebook-color);
+  padding-top: 2px;
+}
+.fa-facebook {
+  background: var(--facebook-color);
+  color: var(#fff);
+  height: 2em;
+}
+.twitter {
+  background-color: var(--twitter-color);
+  color: var(#fff);
+}
+.fa-x-twitter {
+  background-color: var(--twitter-color);
+  color: var(#fff);
+}
+.fa-instagram {
+  background: var(--instagram-gradient);
+  height: 2em;
+  /*;*/
+}
+.qrcode {
+  background: var(--qrcode-color);
+}
+.fa-qrcode {
+  padding-top: 2px;
+  background: var(--qrcode-color);
+  height: 1.4em;
+}
+.email {
+  background-color: var(--email-color);
+  height: 2em;
+  /* --linkedin-color: #0077af;*/
+}
+.fa-envelope {
+  background-color: var(--email-color);
+}
 body {
   max-width: 1600px;
   height: 100%;
+  overflow-x: hidden;
 }
 
 /* HEADER */
@@ -199,14 +297,7 @@ h2 {
   right: 14px;
   border-left: 12px solid #009044;
 }
-/*
-.fa-brands {
-  width: 50px;
-  display: block;
-  height: 50px;
-  position: absolute;
-  top: 32%;
-}*/
+
 h3 {
   /*display: block;
   align-self: center;
@@ -220,8 +311,8 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #cfbbbb;
-  width: 100%;
+  background-color: #373434;
+  width: 110%;
   height: 300px;
 }
 /*
