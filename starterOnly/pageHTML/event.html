@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tous nos évenements </title>
-    <link rel="stylesheet" href="event.css">
-    <link rel="stylesheet" href="bases.css">
-    <style type="text/css">
+    <link rel="stylesheet" href="../pageCSS/event.css">
+    <link rel="stylesheet" href="../pageCSS/bases.css">
 
-    </style>
 </head>
 
 <body>
@@ -20,7 +18,7 @@
                 <a href="">
                     <li class="flag">Acceuil</li>
                 </a>
-                <a href="">
+                <a href="./benevolat.html" target="_blank">
                     <li class="flag">Bénévolat</li>
                 </a>
 
@@ -65,10 +63,11 @@
     <h1 class="loremH">tous nos évenements </h1>
 
 
-    <!--iconeSocial-->
+    <!--iconeSocial Téseau sociaux-->
     <div class="social-inner always-visible vertical background-social label-is-icon">
 
-        <a data-v-85211400="" class=" share-item facebook" href="https://facebook.com">
+        <a data-v-85211400="" class=" share-item facebook" style='background: var(--facebook-color);'
+            href="https://facebook.com" target="_blank">
             <svg class=" svg-inline--fa fa-facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path class="" fill="currentColor" d=" M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2
                     504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7
@@ -77,8 +76,8 @@
                 </path>
             </svg>
         </a>
-        <a data-v-85211400="" class="share-item  twitter " href="https://twitter.com" data-ga-event="share"
-            data-ga-value="Twitter" data-twitter-msg="Faites un don à APF France handicap">
+        <a data-v-85211400="" class="share-item twitter" style="background-color: var(--twitter-color);"
+            href="https://twitter.com" target="_blank" data-twitter-msg="Faites un don à APF France handicap">
             <svg class="svg-inline--fa fa-x-twitter" data-prefix="fab" data-icon="x-twitter" role="img"
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path class="" fill="currentColor"
@@ -87,8 +86,8 @@
             </svg>
         </a>
 
-        <a data-v-85211400="" class="share-item instagram" data-ga-event="share" data-ga-value="Instagram"
-            target="_blank">
+        <a data-v-85211400="" class="share-item instagram" style="background: var(--instagram-gradient);
+        " data-ga-event="share" data-ga-value="Instagram" target="_blank">
             <svg class="svg-inline--fa fa-instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                 <path class="" fill="currentColor"
                     d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
@@ -96,8 +95,8 @@
             </svg>
         </a>
 
-        <a data-v-85211400="" class="share-item linkedin" data-ga-event="share" data-ga-value="LinkedIn"
-            data-href="https://linkedin.com">
+        <a data-v-85211400="" class="share-item linkedin" style=" background-color: var(--linkedin-color);"
+            data-ga-event="share" data-ga-value="LinkedIn" data-href="https://linkedin.com">
             <svg data-v-85211400="" class="svg-inline--fa fa-linkedin" aria-hidden="true" focusable="false"
                 data-prefix="fab" data-icon="linkedin" role="img" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512">
@@ -108,7 +107,7 @@
         </a>
 
         <a data-v-85211400="" class="share-item email" href="" target="_blank" data-ga-event="share"
-            data-ga-value="Email">
+            style="  background-color: var(--email-color);" data-ga-value="Email">
             <svg data-v-85211400="" class="svg-inline--fa fa-envelope" aria-hidden="true" focusable="false"
                 data-prefix="fas" data-icon="envelope" role="img" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512">
@@ -118,8 +117,8 @@
             </svg>
         </a>
 
-        <a data-v-85211400="" class="share-item  qrcode js-show-qrmodal" data-ga-event="share" data-ga-value="QrCode"
-            href="qr.html">
+        <a data-v-85211400="" class="share-item  qrcode js-show-qrmodal" style="  background: var(--qrcode-color);"
+            data-ga-event="share" data-ga-value="QrCode" href="qr.html">
             <svg data-v-85211400="" class="svg-inline--fa fa-qrcode" aria-hidden="true" focusable="false"
                 data-prefix="fas" data-icon="qrcode" role="img" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512">
@@ -129,7 +128,8 @@
             </svg>
         </a>
 
-        <a data-v-85211400="" class="share-item  widget js-show-widget " data-ga-event="share" data-ga-value="Widget">
+        <a data-v-85211400="" class="share-item  widget js-show-widget" style="  background-color: var(--widget-color);"
+            data-ga-event="share" data-ga-value="Widget">
             <svg data-v-85211400="" class="svg-inline--fa fa-code" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 640 512">
                 <path class="" fill="currentColor"
@@ -138,8 +138,8 @@
             </svg>
         </a>
 
-        <a data-v-85211400="" class="share-item  subscribe" data-ga-event="share" aria-label="Tenez-moi informé(e)"
-            data-bs-original-title="Tenez-moi informé(e)">
+        <a data-v-85211400="" class="share-item  subscribe" style="  background-color: var(--theme-color);"
+            data-ga-event="share" aria-label="Tenez-moi informé(e)" data-bs-original-title="Tenez-moi informé(e)">
             <svg class="svg-inline--fa fa-star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 576 512">
                 <path class="" fill="currentColor"
@@ -152,15 +152,15 @@
 
     <div class="carousel">
         <div class="carousel-images">
-            <img src="assetes/images/marathonI.jpg" alt="Image 1">
-            <img src="assetes/images/marathonIA.jpg" alt="Image 2">
-            <img src="assetes/images/marathonID.jpg" alt="Image 3">
-            <img src="assetes/images/marathonIE7.jpg" alt="Image 4">
-            <img src="assetes/images/marathonIF.jpg" alt="Image 5">
-            <img src="assetes/images/marathonIG.jpg" alt="Image 6">
-            <img src="assetes/images/marathonIR.jpg" alt="Image 7">
-            <img src="assetes/images/marathonIH.avif" alt="Image 8">
-            <img src="assetes/images/marathonIU.jpg" alt="Image 9">
+            <img src="../assetes/images/marathonI.jpg" alt="Image 1">
+            <img src="../assetes/images/marathonIA.jpg" alt="Image 2">
+            <img src="../assetes/images/marathonID.jpg" alt="Image 3">
+            <img src="../assetes/images/marathonIE7.jpg" alt="Image 4">
+            <img src="../assetes/images/marathonIF.jpg" alt="Image 5">
+            <img src="../assetes/images/marathonIG.jpg" alt="Image 6">
+            <img src="../assetes/images/marathonIR.jpg" alt="Image 7">
+            <img src="../assetes/images/marathonIH.avif" alt="Image 8">
+            <img src="../assetes/images/marathonIU.jpg" alt="Image 9">
         </div>
         <!-- <button id="prevBtn" onclick="prevSlide()">Previous</button>
         <button id="nextBtn" onclick="nextSlide()">Next</button> -->
@@ -286,7 +286,7 @@
         </div>
     </div>
 
-    <br />
+
     <footer>
         <div class="footerNavigation">
             <ul class="footerSocial__list">
@@ -344,13 +344,9 @@
                 </li>
             </ul>
 
-
-
-
-
         </div>
     </footer>
-    <script src="event.js"></script>
+    <script src="../pageJS/event.js"></script>
 </body>
 
 </html>
