@@ -21,5 +21,6 @@
 <li> Création d'une fenêtre modale avec un message de confirmation d'inscription.</li>
  </ul>
 <h2> 🌐 Le site de projet </h2> 
-<a href="https://nesrineyah.github.io/Marathon__Projet-Perso /"></a> 
+
+https://nesrineyah.github.io/Marathon__Projet-Perso /
 
