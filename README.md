@@ -3,10 +3,11 @@
 
 <p> Ce projet sert à créer une site web pour un évenement soprtif les jeux olympique qui contient les différents évenement sportifs.</p> 
 
-<li>  Créer une  page web attrayante avec HTML et CSS, et JavaScript pour afficher toutes les informations utiles des évènement disponible à l'utilisateur et dans le site il y a beaucoup de fonctions qui dynamise la page.<li> 
-<li>  🎯 Implémenter des fonctionnalités interactives avec JavaScript pour améliorer l'expérience utilisateur. <li> 
-<li> ✅ Valider les entrées du formulaire et afficher des messages d'erreur appropriés en cas de données incorrectes.<li> 
-<li> ⚙️ Ajouter des interactions avec l'utilisateur, telles que l'ouverture et la fermeture d'une fenêtre modale.<li> 
+<li>  Créer une  page web attrayante avec HTML et CSS, et JavaScript pour afficher toutes les informations utiles des évènements disponibles à l'utilisateur.</li> 
+<li> Le site contient beaucoup de fonctions qui dynamise la page comme la fonction qui gère la carrousel, une autre fonction pour les cookies, ainsi que tout les évènement de gérer les clciks des bouttons</li> 
+<li>  🎯 Implémenter des fonctionnalités interactives avec JavaScript pour améliorer l'expérience utilisateur. </li> 
+<li> ✅ Valider les entrées du formulaire et afficher des messages d'erreur appropriés en cas de données incorrectes.</li> 
+<li> ⚙️ Ajouter des interactions avec l'utilisateur, telles que l'ouverture et la fermeture d'une fenêtre modale.</li> 
 
 <h2> 🔧 Détails de l'implémentation </h2>
 <div>
