@@ -27,12 +27,3 @@ function changeLanguage(language) {
 
 // Exemple d'utilisation : changer la langue en français
 changeLanguage("fr");
-
-/*
-// Fonction pour changer de langue
-function changeLanguage(lang) {
-  currentLanguage = lang;
-  localStorage.setItem("preferredLanguage", lang);
-  applyTranslations(lang);
-}
-*/
