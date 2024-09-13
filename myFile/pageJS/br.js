@@ -90,10 +90,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 let currentLanguage = "fr"; // Langue par défaut
-
+// `(./myfile/lang/${lang}.json `)
 async function loadLanguage(lang) {
   try {
-    const response = await fetch(`../lang/${lang}.json`); //./myfile/lang/${lang}.json
+    const response = await fetch(`./myFile/lang/${lang}.json`, {
+      method: "GET",
+    });
+
     if (!response.ok) {
       throw new Error(
         `Erreur de chargement du fichier de langue: ${response.statusText}`
@@ -105,6 +108,7 @@ async function loadLanguage(lang) {
     console.error(error);
     return {};
   }
+  loadLanguage(lang);
 }
 
 // Fonction pour appliquer les traductions
