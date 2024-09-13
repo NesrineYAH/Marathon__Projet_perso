@@ -835,19 +835,22 @@
 
     <div id="cookieConsent" class="ot-sdk-container cookie-consent hidden">
       <div class="ot-sdk-row">
-      <div id="onetrust-group-container" class="ot-sdk-eight ot-sdk-columns">
-   
-     
-        <div id="onetrust-policy-text">En cliquant sur «&nbsp;Accepter tous les cookies&nbsp;», vous acceptez le stockage de cookies sur votre appareil pour améliorer la navigation sur le site, analyser son utilisation et contribuer à nos efforts de marketing.
-           </div>
-      </div>
-        <div id="onetrust-button-group-parent" class="ot-sdk-three ot-sdk-columns has-reject-all-button">
-          <div id="onetrust-button-group">
-            <button id="onetrust-pc-btn-handler" onclick="ParamCookies()">Paramètres des cookies</button>
-            <button id="onetrust-reject-all-handler"
-            onclick="refuserLesCookies()"> Refuser les cookies</button>
-          <button id="onetrust-accept-btn-handler" onclick="accepterLesCookies()">
-            Autoriser tous les cookies  </button>
+        <div id="onetrust-policy-text" data-i18n="cookiesTxt"></div>
+    </div>
+      <div id="onetrust-button-group-parent" class="ot-sdk-three ot-sdk-columns has-reject-all-button">
+        <div id="onetrust-button-group">
+          <button id="onetrust-pc-btn-handler" onclick="ParamCookies()" data-i18n="cookiesTxtSetting">Paramètres des cookies</button>
+          
+        
+          <button id="onetrust-reject-all-handler" data-i18n="cookiesTxtAccept"
+              onclick="refuserLesCookies()">
+              Refuser les cookies
+            </button>
+            <button id="onetrust-accept-btn-handler" data-i18n="cookiesTxtrefus"
+              onclick="accepterLesCookies()">
+              Autoriser tous les cookies
+            </button>
+
             </div>
           </div>
           <div id="allCookieCategory"  style="display: none;">
