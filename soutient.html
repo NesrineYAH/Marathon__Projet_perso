@@ -832,125 +832,124 @@
       </div>
     </footer>
 
-
     <div id="cookieConsent" class="ot-sdk-container cookie-consent hidden">
       <div class="ot-sdk-row">
+      <div id="onetrust-group-container" class="ot-sdk-eight ot-sdk-columns">
         <div id="onetrust-policy-text" data-i18n="cookiesTxt"></div>
-    </div>
-      <div id="onetrust-button-group-parent" class="ot-sdk-three ot-sdk-columns has-reject-all-button">
-        <div id="onetrust-button-group">
-          <button id="onetrust-pc-btn-handler" onclick="ParamCookies()" data-i18n="cookiesTxtSetting">Paramètres des cookies</button>
+      </div>
+  
+        <div id="onetrust-button-group-parent" class="ot-sdk-three ot-sdk-columns has-reject-all-button">
+          <div id="onetrust-button-group">
+            <button id="onetrust-pc-btn-handler" onclick="ParamCookies()" data-i18n="cookiesTxtSetting">Paramètres des cookies</button>
           
-        
-          <button id="onetrust-reject-all-handler" data-i18n="cookiesTxtAccept"
-              onclick="refuserLesCookies()">
-              Refuser les cookies
-            </button>
-            <button id="onetrust-accept-btn-handler" data-i18n="cookiesTxtrefus"
-              onclick="accepterLesCookies()">
-              Autoriser tous les cookies
-            </button>
-
-            </div>
-          </div>
-          <div id="allCookieCategory"  style="display: none;">
-            <div class="allCookieCategory">
-              <button type="button" id="Close" class="Fermer close" style="color: blue;">x</button>
-            <h2 class="montitre">Centre de préférences de la confidentialité</h2>
-            <span class="textCookies">
-              Lorsque vous consultez un site Web, des données peuvent être stockées dans votre navigateur ou récupérées à partir de celui-ci, généralement sous la forme de cookies. Ces informations peuvent porter sur vous, sur vos préférences ou sur votre appareil et sont principalement utilisées pour s'assurer que le site Web fonctionne correctement. Les informations ne permettent généralement pas de vous identifier directement, mais peuvent vous permettre de bénéficier d'une expérience Web personnalisée. Parce que nous respectons votre droit à la vie privée, nous vous donnons la possibilité de ne pas autoriser certains types de cookies. Cliquez sur les différentes catégories pour obtenir plus de détails sur chacune d'entre elles, et modifier les paramètres par défaut. Toutefois, si vous bloquez certains types de cookies, votre expérience de navigation et les services que nous sommes en mesure de vous offrir peuvent être impactés. </span>
-              <button  class ="cookieBtnI"   id="onetrust-accept-btn-handler"
-              onclick="accepterLesCookies()">
-              Tout autoriser
-            </button> 
-        
-              <div class="cookie-category">
-                <div class="someTile">
-                <h4>Cookies Stricktement nécéssaires </h4>
-                <h5>Toujours Actif</h5>
-                 </div>      
-                <div id="lebel">
-                  <button id="toggleButton" onclick="toggleShow('contenu35', this)" >
-                    <span class="Chevron Chevron__down"></span> +
-                </button> 
-                </div>
-                <div id="contenu35" class="Contenu" style="display: none;">
-                  <p>Ces cookies sont nécessaires au bon fonctionnement du site web et ne peuvent pas être désactivés dans nos systèmes.</p>
-                </div>
-             </div>
-           <div class="cookie-category">
-              <h4>Cookies Essentiels</h4>      
-              <div id="lebel">
-              <button id="toggleButton" onclick="toggleShow('contenu36', this)" >
-                  <span class="Chevron Chevron__down"></span> +
+            <button id="onetrust-reject-all-handler" data-i18n="cookiesTxtAccept"
+                onclick="refuserLesCookies()">
+                Refuser les cookies
               </button>
-                <label class="switch">
-                  <input type="checkbox"  checked/>
-                  <span class="slider" aria-label="cookies de performance"></span>
-                </label>
-              </div>
-              <div id="contenu36" class="Contenu" style="display: none;">
-                <p>Ces cookies sont nécessaires au bon fonctionnement du site web et ne peuvent pas être désactivés dans nos systèmes.</p>
-              </div>
-          </div>
-          <div class="cookie-category">
-              <h4>Cookies de Performance</h4>
-              <div id="lebel">
-              <button id="toggleButton" onclick="toggleShow('contenu37', this)">
-                <span class="Chevron Chevron__down"></span> +
-            </button> 
-            <label class="switch">
-              <input type="checkbox" checked/>
-              <span class="slider" aria-label="cookies de performance"></span>
-            </label>
-              </div>
-            <div id="contenu37" class="Contenu" style="display: none;">
-              <p>Ces cookies sont nécessaires aloremu bon fonctionnement du site web et ne peuvent pas être désactivés dans nos systèmes.
-              Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
-              </p>
+              <button id="onetrust-accept-btn-handler" data-i18n="cookiesTxtrefus"
+                onclick="accepterLesCookies()">
+                Autoriser tous les cookies
+              </button>
+  
+            
+            <div id="allCookieCategory"  style="display: none;">
+              <div class="allCookieCategory">
+                <button type="button" id="Close" class="Fermer close" style="color: blue;"></button>
+              <h2 class="montitre" data-i18n="titreCookies">Centre de préférences de la confidentialité</h2>
+              <span class="textCookies" data-i18n="PrgCookies"></span>
+                <button  class ="cookieBtnI"   id="onetrust-accept-btn-handler" data-i18n="ButToutAutoriser"
+                onclick="accepterLesCookies()">
+       
+              </button> 
+          
+                <div class="cookie-category">
+                  <div class="someTile">
+                  <h4 data-i18n="stCookiesI">Cookies Stricktement nécéssaires </h4>
+                  <h5 data-i18n="stCookiesIi">Toujours Actif</h5>
+                   </div>      
+                  <div id="lebel">
+                    <button id="toggleButton" onclick="toggleShow('contenu35', this)" >
+                      <span class="Chevron Chevron__down"></span> +
+                  </button> 
+                  </div>
+                  <div id="contenu35" class="Contenu" style="display: none;" >
+                    <p data-i18n="spCookiesI"></p>
+                  </div>
+               </div>
+             <div class="cookie-category">
+                <h4 data-i18n="stCookiesII">Cookies Essentiels</h4>      
+                <div id="lebel">
+                <button id="toggleButton" onclick="toggleShow('contenu36', this)" >
+                    <span class="Chevron Chevron__down"></span> +
+                </button>
+                  <label class="switch">
+                    <input type="checkbox"  checked/>
+                    <span class="slider" aria-label="cookies de performance"></span>
+                  </label>
+                </div>
+                <div id="contenu36" class="Contenu" style="display: none;" >
+                  <p data-i18n="stCookiesII"></p>
+                </div>
             </div>
-           
-          </div>  
-          <div class="cookie-category">
-              <h4>Cookies de Fonctionnalité</h4>
-        
-           
-            <div id="lebel">
-              <button id="toggleButton" onclick="toggleShow('contenu38', this)">
-                <span class="Chevron Chevron__down"></span> +
+            <div class="cookie-category">
+                <h4 data-i18n="stCookiesIII">Cookies de Performance</h4>
+                <div id="lebel">
+                <button id="toggleButton" onclick="toggleShow('contenu37', this)">
+                  <span class="Chevron Chevron__down"></span> +
               </button> 
               <label class="switch">
                 <input type="checkbox" checked/>
                 <span class="slider" aria-label="cookies de performance"></span>
               </label>
-             </div>
-
-            <div id="contenu38" class="Contenu" style="display: none;">
-            <p>Ces cookies sont nécessaires au bon fonctionnement du site web et ne peuvent pas être désactivés dans nos systèmes.</p>
-            </div>
-
-          </div>    
-          <div class="cookie-category">
-              <h4>Cookies de Ciblage</h4>
+                </div>
+              <div id="contenu37" class="Contenu" style="display: none;">
+                <p data-i18n="spCookiesIII"></p>
+              </div>
+             
+            </div>  
+            <div class="cookie-category">
+                <h4 data-i18n="stCookiesIIII">Cookies de Fonctionnalité</h4>
+          
+             
               <div id="lebel">
-                <button id="toggleButton" onclick="toggleShow('contenu39', this)">
+                <button id="toggleButton" onclick="toggleShow('contenu38', this)">
                   <span class="Chevron Chevron__down"></span> +
-              </button> 
-              <label class="switch">
-                <input type="checkbox" checked />
-                <span class="slider" aria-label="cookies de performance"></span>
-              </label>
+                </button> 
+                <label class="switch">
+                  <input type="checkbox" checked/>
+                  <span class="slider" aria-label="cookies de performance"></span>
+                </label>
                </div>
-            <div id="contenu39" class="Contenu" style="display: none;">
-              <p>Ces cookies sont nécessaires au bon fonctionnement du site web et ne peuvent pas être désactivés dans nos systèmes.</p>
+  
+              <div id="contenu38" class="Contenu" style="display: none;">
+              <p data-i18n="spCookiesIIII"></p>
+              </div>
+  
+            </div>    
+            <div class="cookie-category">
+                <h4 data-i18n="stCookiesIV">Cookies de Ciblage</h4>
+                <div id="lebel">
+                  <button id="toggleButton" onclick="toggleShow('contenu39', this)">
+                    <span class="Chevron Chevron__down"></span> +
+                </button> 
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <span class="slider" aria-label="cookies de performance"></span>
+                </label>
+                 </div>
+              <div id="contenu39" class="Contenu" style="display: none;">
+                <p data-i18n="spCookiesIV"></p>
+              </div>
             </div>
-          </div>
-
-          <button class ="cookieBtnII" id="onetrust-accept-btn-handler" onclick="accepterLesCookies()">Confirmer la selection</button>
-           </div>
-        </div> 
-          </div>
-    </div>
+  
+            <button class ="cookieBtnII" id="onetrust-accept-btn-handler" onclick="accepterLesCookies()" data-i18n="confirm">Confirmer la selection</button>
+             </div>
+          </div> 
+  </div>
+        </div>
+      </div>
+     </div>
+  
 
 
 

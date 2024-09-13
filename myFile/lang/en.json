@@ -17,10 +17,11 @@
 "spCookiesII": "They are generally only activated in response to actions you perform that correspond to a request for services, such as setting your privacy preferences, logging in or filling out forms.",
 "stCookiesIII": "Performance Cookies",
 "spCookiesIII": "These cookies allow us to obtain statistics on the frequency and use of the site, in order to measure and improve its performance by optimizing its ergonomics, navigation and content. They help us to know the number of visits, the number of pages viewed and the sources of traffic, but also to identify where users arrive and leave our site, what their path is on our site and how it is used. ",
-"StCookiesIIII": "Functionality Cookies",
+"stCookiesIIII": "Functionality Cookies",
 "spCookiesIIII": "These cookies allow us to offer you an experience and features adapted to your use. They may be activated by us or by third parties whose services are used on our website pages. If you do not accept this category of cookies, some features may not function properly.",
 "stCookiesIV": "Targeting Cookies",
 "spCookiesIV": "These cookies are activated on our website by our advertising partners. They may be used by these companies to build profiles on your interests, in order to offer you targeted advertising on other sites.",
+"confirm" :"confirm the selection", 
 
 "title": "Frequently Asked Questions (FAQ)",
 "titleFAQ-1": "Who has the right to participate in the sports and Marathon events of 2024?",

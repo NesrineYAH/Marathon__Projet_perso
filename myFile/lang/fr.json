@@ -14,7 +14,7 @@
 "stCookiesIi" : "Toujours Actif",
 "spCookiesI": "Ces cookies sont nécessaires au bon fonctionnement du site web et ne peuvent pas être désactivés dans nos systèmes.",
 
-"stCookiesgit add .II" : "Cookies Essentiels", 
+"stCookiesII" : "Cookies Essentiels", 
 "spCookiesII": " Ils ne sont généralement qu'activés en réponse à des actions que vous effectuez et qui correspondent à une demande de services, comme la configuration de vos préférences de confidentialité, la connexion ou le remplissage de formulaires.",
 "stCookiesIII" : "Cookies de performance", 
 "spCookiesIII" : "Ces cookies nous permettent d’obtenir des statistiques de fréquentation et d’utilisation du site, afin d’en mesurer et d’en améliorer les performances en optimisant son ergonomie, sa navigation et ses contenus. Ils nous aident à connaître le nombre de visites, le nombre de pages vues et les sources de trafic, mais aussi à identifier où les utilisateurs arrivent et quittent notre site, quel est leurs parcours dans notre site et comment il est utilisé. ",
@@ -22,7 +22,7 @@
 "spCookiesIIII" : "Ces cookies permettent de vous proposer une expérience et des fonctionnalités adaptées à votre utilisation. Ils peuvent être activés par nous-mêmes ou par des tiers dont les services sont utilisés sur les pages de notre site web. Si vous n'acceptez pas cette catégorie de cookies, certaines fonctionnalités sont susceptibles de ne pas fonctionner correctement.",
 "stCookiesIV": "Cookies de Ciblage", 
 "spCookiesIV" : "Ces cookies sont activés sur notre site web par nos partenaires publicitaires. Ils peuvent être utilisés par ces entreprises pour établir des profils sur vos intérêts, afin de vous proposer des publicités ciblées sur d’autres sites.",
-
+"confirm": "confirmer la selection",
 
 "titleth":"préparez vous pour les jeux",
 "title": "Foire aux Questions (FAQ)",
